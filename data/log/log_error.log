@@ -1,1 +1,2 @@
 25-06-10.12:45:45.983 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[cn.zmj]' package. Please check your configuration.
+25-06-10.12:50:02.562 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[cn.zmj]' package. Please check your configuration.
