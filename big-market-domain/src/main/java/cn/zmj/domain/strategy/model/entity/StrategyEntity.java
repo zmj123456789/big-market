@@ -15,6 +15,7 @@ public class StrategyEntity {
     private Long strategyId;
     private String strategyDesc;
     private String ruleModels;
+    //对rulemodels字符串分割，返回策略列表
     public String[] ruleModels(){
         if(StringUtils.isBlank(ruleModels)) return null;
         return ruleModels.split(Constants.SPLIT);
