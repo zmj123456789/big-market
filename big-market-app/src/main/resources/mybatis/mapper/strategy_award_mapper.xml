@@ -4,17 +4,17 @@
 
     <resultMap id="dataMap" type="cn.zmj.infrastructure.persistent.po.StrategyAward">
         <id column="id" property="id"/>
-        <result column="strategyId" property="strategy_id"/>
-        <result column="awardId" property="award_id"/>
-        <result column="awardTitle" property="award_title"/>
-        <result column="awardSubtitle" property="award_subtitle"/>
-        <result column="awardCount" property="award_count"/>
-        <result column="awardCountSurplus" property="award_count_surplus"/>
-        <result column="awardRate" property="award_rate"/>
+        <result column="strategy_id" property="strategyId"/>
+        <result column="award_id" property="awardId"/>
+        <result column="award_title" property="awardTitle"/>
+        <result column="award_subtitle" property="awardSubtitle"/>
+        <result column="award_count" property="awardCount"/>
+        <result column="award_count_surplus" property="awardCountSurplus"/>
+        <result column="award_rate" property="awardRate"/>
         <result column="sort" property="sort"/>
-        <result column="createTime" property="create_time"/>
-        <result column="updateTime" property="update_time"/>
-        <result column="ruleModels" property="rule_models"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="rule_models" property="ruleModels"/>
     </resultMap>
 
     <select id="queryStrategyAward" resultMap="dataMap">
@@ -22,5 +22,12 @@
         from strategy_award
         limit 10
     </select>
+
+    <select id="queryStrategyAwardListByStrategyId" parameterType="java.lang.Long" resultMap="dataMap">
+        select strategy_id,award_id,award_count,award_count_surplus,award_rate
+        from strategy_award
+        where strategy_id=#{strategy_id}
+    </select>
+
 
 </mapper>

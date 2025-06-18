@@ -1,24 +1,198 @@
-25-06-10.12:45:45.217 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 18036 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
-25-06-10.12:45:45.229 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-06-10.12:45:45.983 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[cn.zmj]' package. Please check your configuration.
-25-06-10.12:45:46.514 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-06-10.12:45:46.524 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-06-10.12:45:46.525 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-06-10.12:45:46.525 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-06-10.12:45:46.647 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-06-10.12:45:46.648 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1336 ms
-25-06-10.12:45:47.261 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-06-10.12:45:47.287 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-06-10.12:45:47.301 [main            ] INFO  Application            - Started Application in 2.762 seconds (JVM running for 3.472)
-25-06-10.12:50:02.148 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 24964 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
-25-06-10.12:50:02.151 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-06-10.12:50:02.562 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[cn.zmj]' package. Please check your configuration.
-25-06-10.12:50:02.850 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-06-10.12:50:02.857 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-06-10.12:50:02.857 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-06-10.12:50:02.857 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-06-10.12:50:02.932 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-06-10.12:50:02.932 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 748 ms
-25-06-10.12:50:03.300 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-06-10.12:50:03.314 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-06-10.12:50:03.322 [main            ] INFO  Application            - Started Application in 1.543 seconds (JVM running for 2.079)
+25-06-17.14:50:14.863 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 1008 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
+25-06-17.14:50:14.867 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-06-17.14:50:15.666 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-17.14:50:15.668 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-17.14:50:15.690 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+25-06-17.14:50:16.424 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-06-17.14:50:16.433 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-06-17.14:50:16.433 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-06-17.14:50:16.433 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-06-17.14:50:16.549 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-06-17.14:50:16.550 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1635 ms
+25-06-17.14:50:17.016 [main            ] INFO  Version                - Redisson 3.27.0
+25-06-17.14:50:17.183 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyArmory': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strateRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [cn/zmj/config/RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is java.lang.NoSuchMethodError: 'io.netty.resolver.dns.DnsNameResolverBuilder io.netty.resolver.dns.DnsNameResolverBuilder.socketChannelType(java.lang.Class, boolean)'
+25-06-17.14:50:17.186 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+25-06-17.14:50:17.209 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+25-06-17.14:50:17.233 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.redisson.connection.SequentialDnsAddressResolverFactory.create(SequentialDnsAddressResolverFactory.java:104)
+
+The following method did not exist:
+
+    'io.netty.resolver.dns.DnsNameResolverBuilder io.netty.resolver.dns.DnsNameResolverBuilder.socketChannelType(java.lang.Class, boolean)'
+
+The calling method's class, org.redisson.connection.SequentialDnsAddressResolverFactory, was loaded from the following location:
+
+    jar:file:/G:/develop/apache-maven-3.9.9/repository/org/redisson/redisson/3.27.0/redisson-3.27.0.jar!/org/redisson/connection/SequentialDnsAddressResolverFactory.class
+
+The called method's class, io.netty.resolver.dns.DnsNameResolverBuilder, is available from the following locations:
+
+    jar:file:/G:/develop/apache-maven-3.9.9/repository/io/netty/netty-resolver-dns/4.1.92.Final/netty-resolver-dns-4.1.92.Final.jar!/io/netty/resolver/dns/DnsNameResolverBuilder.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    io.netty.resolver.dns.DnsNameResolverBuilder: file:/G:/develop/apache-maven-3.9.9/repository/io/netty/netty-resolver-dns/4.1.92.Final/netty-resolver-dns-4.1.92.Final.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.redisson.connection.SequentialDnsAddressResolverFactory and io.netty.resolver.dns.DnsNameResolverBuilder
+
+25-06-17.14:59:34.477 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 21728 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
+25-06-17.14:59:34.480 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-06-17.14:59:35.233 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-17.14:59:35.236 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-17.14:59:35.263 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+25-06-17.14:59:35.963 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-06-17.14:59:35.970 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-06-17.14:59:35.970 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-06-17.14:59:35.970 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-06-17.14:59:36.063 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-06-17.14:59:36.063 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1544 ms
+25-06-17.14:59:36.468 [main            ] INFO  Version                - Redisson 3.27.0
+25-06-17.14:59:36.620 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyArmory': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strateRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [cn/zmj/config/RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is java.lang.NoSuchMethodError: 'io.netty.resolver.dns.DnsNameResolverBuilder io.netty.resolver.dns.DnsNameResolverBuilder.socketChannelType(java.lang.Class, boolean)'
+25-06-17.14:59:36.623 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+25-06-17.14:59:36.636 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+25-06-17.14:59:36.649 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.redisson.connection.SequentialDnsAddressResolverFactory.create(SequentialDnsAddressResolverFactory.java:104)
+
+The following method did not exist:
+
+    'io.netty.resolver.dns.DnsNameResolverBuilder io.netty.resolver.dns.DnsNameResolverBuilder.socketChannelType(java.lang.Class, boolean)'
+
+The calling method's class, org.redisson.connection.SequentialDnsAddressResolverFactory, was loaded from the following location:
+
+    jar:file:/G:/develop/apache-maven-3.9.9/repository/org/redisson/redisson/3.27.0/redisson-3.27.0.jar!/org/redisson/connection/SequentialDnsAddressResolverFactory.class
+
+The called method's class, io.netty.resolver.dns.DnsNameResolverBuilder, is available from the following locations:
+
+    jar:file:/G:/develop/apache-maven-3.9.9/repository/io/netty/netty-resolver-dns/4.1.92.Final/netty-resolver-dns-4.1.92.Final.jar!/io/netty/resolver/dns/DnsNameResolverBuilder.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    io.netty.resolver.dns.DnsNameResolverBuilder: file:/G:/develop/apache-maven-3.9.9/repository/io/netty/netty-resolver-dns/4.1.92.Final/netty-resolver-dns-4.1.92.Final.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.redisson.connection.SequentialDnsAddressResolverFactory and io.netty.resolver.dns.DnsNameResolverBuilder
+
+25-06-17.15:00:41.675 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 11228 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
+25-06-17.15:00:41.677 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-06-17.15:00:42.329 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-17.15:00:42.331 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-17.15:00:42.352 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+25-06-17.15:00:42.953 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-06-17.15:00:42.960 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-06-17.15:00:42.960 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-06-17.15:00:42.960 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-06-17.15:00:43.049 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-06-17.15:00:43.050 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1336 ms
+25-06-17.15:00:43.461 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-17.15:00:43.847 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 10.12.54.43/10.12.54.43:6380
+25-06-17.15:00:43.861 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 10.12.54.43/10.12.54.43:6380
+25-06-17.15:00:44.729 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-17.15:00:44.752 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-06-17.15:00:44.774 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-06-17.15:00:44.787 [main            ] INFO  Application            - Started Application in 3.518 seconds (JVM running for 4.001)
+25-06-17.15:00:45.008 [RMI TCP Connection(2)-10.12.42.138] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-06-17.15:00:45.008 [RMI TCP Connection(2)-10.12.42.138] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-06-17.15:00:45.009 [RMI TCP Connection(3)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-06-17.15:00:45.010 [RMI TCP Connection(2)-10.12.42.138] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-06-17.15:00:45.338 [RMI TCP Connection(3)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-06-17.16:40:13.430 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-06-17.16:40:13.439 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-06-17.16:45:31.367 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 28552 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
+25-06-17.16:45:31.370 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-06-17.16:45:32.090 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-17.16:45:32.092 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-17.16:45:32.113 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+25-06-17.16:45:32.737 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-06-17.16:45:32.743 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-06-17.16:45:32.744 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-06-17.16:45:32.744 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-06-17.16:45:32.836 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-06-17.16:45:32.836 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1426 ms
+25-06-17.16:45:33.335 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-17.16:45:33.572 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 10.12.54.43/10.12.54.43:6380
+25-06-17.16:45:33.588 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 10.12.54.43/10.12.54.43:6380
+25-06-17.16:45:34.177 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-17.16:45:34.202 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-06-17.16:45:34.211 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-06-17.16:45:34.223 [main            ] INFO  Application            - Started Application in 3.305 seconds (JVM running for 3.797)
+25-06-17.16:45:34.598 [RMI TCP Connection(1)-10.12.42.138] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-06-17.16:45:34.598 [RMI TCP Connection(1)-10.12.42.138] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-06-17.16:45:34.600 [RMI TCP Connection(1)-10.12.42.138] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-06-17.16:45:34.630 [RMI TCP Connection(3)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-06-17.16:45:34.861 [RMI TCP Connection(3)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-06-17.17:31:47.612 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-06-17.17:31:47.621 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-06-17.20:34:04.922 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 16660 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
+25-06-17.20:34:04.925 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-06-17.20:34:05.600 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-17.20:34:05.603 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-17.20:34:05.625 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+25-06-17.20:34:06.234 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-06-17.20:34:06.241 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-06-17.20:34:06.242 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-06-17.20:34:06.242 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-06-17.20:34:06.333 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-06-17.20:34:06.333 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1367 ms
+25-06-17.20:34:06.874 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-17.20:34:07.123 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 10.12.54.43/10.12.54.43:6380
+25-06-17.20:34:07.138 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 10.12.54.43/10.12.54.43:6380
+25-06-17.20:34:07.699 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-17.20:34:07.724 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-06-17.20:34:07.734 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-06-17.20:34:07.746 [main            ] INFO  Application            - Started Application in 3.249 seconds (JVM running for 3.757)
+25-06-17.20:34:07.848 [RMI TCP Connection(2)-10.12.42.138] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-06-17.20:34:07.848 [RMI TCP Connection(2)-10.12.42.138] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-06-17.20:34:07.849 [RMI TCP Connection(3)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-06-17.20:34:07.850 [RMI TCP Connection(2)-10.12.42.138] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-06-17.20:34:08.086 [RMI TCP Connection(3)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-06-17.20:55:07.432 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-06-17.20:55:07.441 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-06-17.20:55:11.141 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 1160 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
+25-06-17.20:55:11.143 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-06-17.20:55:11.813 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-17.20:55:11.815 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-17.20:55:11.837 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+25-06-17.20:55:12.490 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-06-17.20:55:12.499 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-06-17.20:55:12.499 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-06-17.20:55:12.499 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-06-17.20:55:12.599 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-06-17.20:55:12.600 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1420 ms
+25-06-17.20:55:13.105 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-17.20:55:13.419 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 10.12.54.43/10.12.54.43:6380
+25-06-17.20:55:13.519 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 10.12.54.43/10.12.54.43:6380
+25-06-17.20:55:14.197 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-17.20:55:14.221 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-06-17.20:55:14.230 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-06-17.20:55:14.244 [main            ] INFO  Application            - Started Application in 3.512 seconds (JVM running for 3.966)
+25-06-17.20:55:14.409 [RMI TCP Connection(3)-10.12.42.138] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-06-17.20:55:14.409 [RMI TCP Connection(3)-10.12.42.138] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-06-17.20:55:14.411 [RMI TCP Connection(3)-10.12.42.138] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-06-17.20:55:14.430 [RMI TCP Connection(5)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-06-17.20:55:14.670 [RMI TCP Connection(5)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Start completed.

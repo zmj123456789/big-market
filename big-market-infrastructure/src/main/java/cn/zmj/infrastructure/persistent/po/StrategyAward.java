@@ -10,7 +10,7 @@ public class StrategyAward {
     /**自增id*/
     private Long id;
     /**抽奖策略id*/
-    private Long strategy_id;
+    private Long strategyId;
     /**抽奖奖品id*/
     private Integer awardId;
     /**抽奖奖品标题*/

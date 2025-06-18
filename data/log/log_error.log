@@ -1,2 +1,68 @@
-25-06-10.12:45:45.983 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[cn.zmj]' package. Please check your configuration.
-25-06-10.12:50:02.562 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[cn.zmj]' package. Please check your configuration.
+25-06-17.14:50:17.183 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyArmory': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strateRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [cn/zmj/config/RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is java.lang.NoSuchMethodError: 'io.netty.resolver.dns.DnsNameResolverBuilder io.netty.resolver.dns.DnsNameResolverBuilder.socketChannelType(java.lang.Class, boolean)'
+25-06-17.14:50:17.233 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.redisson.connection.SequentialDnsAddressResolverFactory.create(SequentialDnsAddressResolverFactory.java:104)
+
+The following method did not exist:
+
+    'io.netty.resolver.dns.DnsNameResolverBuilder io.netty.resolver.dns.DnsNameResolverBuilder.socketChannelType(java.lang.Class, boolean)'
+
+The calling method's class, org.redisson.connection.SequentialDnsAddressResolverFactory, was loaded from the following location:
+
+    jar:file:/G:/develop/apache-maven-3.9.9/repository/org/redisson/redisson/3.27.0/redisson-3.27.0.jar!/org/redisson/connection/SequentialDnsAddressResolverFactory.class
+
+The called method's class, io.netty.resolver.dns.DnsNameResolverBuilder, is available from the following locations:
+
+    jar:file:/G:/develop/apache-maven-3.9.9/repository/io/netty/netty-resolver-dns/4.1.92.Final/netty-resolver-dns-4.1.92.Final.jar!/io/netty/resolver/dns/DnsNameResolverBuilder.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    io.netty.resolver.dns.DnsNameResolverBuilder: file:/G:/develop/apache-maven-3.9.9/repository/io/netty/netty-resolver-dns/4.1.92.Final/netty-resolver-dns-4.1.92.Final.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.redisson.connection.SequentialDnsAddressResolverFactory and io.netty.resolver.dns.DnsNameResolverBuilder
+
+25-06-17.14:59:36.620 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyArmory': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strateRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [cn/zmj/config/RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is java.lang.NoSuchMethodError: 'io.netty.resolver.dns.DnsNameResolverBuilder io.netty.resolver.dns.DnsNameResolverBuilder.socketChannelType(java.lang.Class, boolean)'
+25-06-17.14:59:36.649 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.redisson.connection.SequentialDnsAddressResolverFactory.create(SequentialDnsAddressResolverFactory.java:104)
+
+The following method did not exist:
+
+    'io.netty.resolver.dns.DnsNameResolverBuilder io.netty.resolver.dns.DnsNameResolverBuilder.socketChannelType(java.lang.Class, boolean)'
+
+The calling method's class, org.redisson.connection.SequentialDnsAddressResolverFactory, was loaded from the following location:
+
+    jar:file:/G:/develop/apache-maven-3.9.9/repository/org/redisson/redisson/3.27.0/redisson-3.27.0.jar!/org/redisson/connection/SequentialDnsAddressResolverFactory.class
+
+The called method's class, io.netty.resolver.dns.DnsNameResolverBuilder, is available from the following locations:
+
+    jar:file:/G:/develop/apache-maven-3.9.9/repository/io/netty/netty-resolver-dns/4.1.92.Final/netty-resolver-dns-4.1.92.Final.jar!/io/netty/resolver/dns/DnsNameResolverBuilder.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    io.netty.resolver.dns.DnsNameResolverBuilder: file:/G:/develop/apache-maven-3.9.9/repository/io/netty/netty-resolver-dns/4.1.92.Final/netty-resolver-dns-4.1.92.Final.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.redisson.connection.SequentialDnsAddressResolverFactory and io.netty.resolver.dns.DnsNameResolverBuilder
+
