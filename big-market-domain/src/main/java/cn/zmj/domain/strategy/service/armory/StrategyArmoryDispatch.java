@@ -4,6 +4,7 @@ import cn.zmj.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.zmj.domain.strategy.model.entity.StrategyEntity;
 import cn.zmj.domain.strategy.model.entity.StrategyRuleEntity;
 import cn.zmj.domain.strategy.repository.IStrategyRepository;
+import cn.zmj.types.common.Constants;
 import cn.zmj.types.enums.ResponseCode;
 import cn.zmj.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
@@ -24,6 +25,8 @@ public class StrategyArmoryDispatch implements IStrategyArmory,IStrategyDispatch
     public boolean assembleLotteryStrategy(Long strategyId) {
         //查询策略配置
         List<StrategyAwardEntity> strategyAwardEntities=repository.queryStrategyAwardList(strategyId);
+        //先将所有策略的奖品范围存入redis
+        assembleLotteryStrategy(String.valueOf(strategyId),strategyAwardEntities);
         //权重策略配置-适用于权重规则配置
         StrategyEntity strategyEntity=repository.queryStrategyByStrategyId(strategyId);
         String ruleWeight=strategyEntity.getRuleWeight();
@@ -38,7 +41,7 @@ public class StrategyArmoryDispatch implements IStrategyArmory,IStrategyDispatch
             List<Integer> ruleWeightValues = ruleWeightValueMap.get(key);
             ArrayList<StrategyAwardEntity> strategyAwardEntitiesClone = new ArrayList<>(strategyAwardEntities);
             strategyAwardEntitiesClone.removeIf(strategyAwardEntity -> !ruleWeightValues.contains(strategyAwardEntity.getAwardId()));
-            assembleLotteryStrategy(String.valueOf(strategyId).concat("_").concat(key),strategyAwardEntitiesClone);
+            assembleLotteryStrategy(String.valueOf(strategyId).concat(Constants.UNDERLINE).concat(key),strategyAwardEntitiesClone);
 
 
         }
@@ -82,7 +85,7 @@ public class StrategyArmoryDispatch implements IStrategyArmory,IStrategyDispatch
 
     @Override
     public Integer getRandomAwardId(Long strategyId,String ruleWeightValue) {
-        String key=String.valueOf(strategyId).concat("_").concat(ruleWeightValue);
+        String key=String.valueOf(strategyId).concat(Constants.UNDERLINE).concat(ruleWeightValue);
         int rateRange=repository.getRateRange(key);
         return repository.getStrategyAwardAssemble(key,new SecureRandom().nextInt(rateRange));
     }

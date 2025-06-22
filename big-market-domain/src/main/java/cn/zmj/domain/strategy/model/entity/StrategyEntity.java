@@ -14,6 +14,10 @@ import org.apache.commons.lang3.StringUtils;
 public class StrategyEntity {
     private Long strategyId;
     private String strategyDesc;
+    /**
+     * 抽奖规则模型 rule_weight,rule_blacklist
+     */
+
     private String ruleModels;
     //对rulemodels字符串分割，返回策略列表
     public String[] ruleModels(){
@@ -22,6 +26,7 @@ public class StrategyEntity {
     }
     public String getRuleWeight(){
         String[] ruleModels=this.ruleModels();
+        if (null == ruleModels) return null;
         for(String ruleModel:ruleModels){
             if("rule_weight".equals(ruleModel))return ruleModel;
         }

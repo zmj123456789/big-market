@@ -3,6 +3,7 @@ package cn.zmj.infrastructure.persistent.repository;
 import cn.zmj.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.zmj.domain.strategy.model.entity.StrategyEntity;
 import cn.zmj.domain.strategy.model.entity.StrategyRuleEntity;
+import cn.zmj.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import cn.zmj.domain.strategy.repository.IStrategyRepository;
 import cn.zmj.infrastructure.persistent.dao.IStrategyAwardDao;
 import cn.zmj.infrastructure.persistent.dao.IStrategyDao;
@@ -84,6 +85,7 @@ public class StrateRepository implements IStrategyRepository {
         StrategyEntity strategyEntity = redisService.getValue(cacheKey);
         if(null!=strategyEntity)return strategyEntity;
         Strategy strategy=strategyDao.queryStrategyByStrategyId(strategyId);
+        if (null == strategy) return StrategyEntity.builder().build();
         strategyEntity = StrategyEntity.builder()
         .strategyId(strategy.getStrategyId())
         .strategyDesc(strategy.getStrategyDesc())
@@ -117,5 +119,15 @@ public class StrateRepository implements IStrategyRepository {
         strategyRule.setAwardId(awardId);
         strategyRule.setRuleModel(ruleModel);
         return strategyRuleDao.queryStrategyRuleValue(strategyRule);
+    }
+
+    @Override
+    public StrategyAwardRuleModelVO queryStrategyAwardRuleModelVO(Long strategyId, Integer awardId) {
+        StrategyAward strategyAward = new StrategyAward();
+        strategyAward.setStrategyId(strategyId);
+        strategyAward.setAwardId(awardId);
+        String ruleModels = strategyAwardDao.queryStrategyAwardRuleModels(strategyAward);
+        return StrategyAwardRuleModelVO.builder().ruleModels(ruleModels).build();
+
     }
 }
