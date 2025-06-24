@@ -28,7 +28,7 @@ public class StrategyArmoryDispatch implements IStrategyArmory,IStrategyDispatch
         //先将所有策略的奖品范围存入redis
         assembleLotteryStrategy(String.valueOf(strategyId),strategyAwardEntities);
         //权重策略配置-适用于权重规则配置
-        StrategyEntity strategyEntity=repository.queryStrategyByStrategyId(strategyId);
+        StrategyEntity strategyEntity=repository.queryStrategyEntityByStrategyId(strategyId);
         String ruleWeight=strategyEntity.getRuleWeight();
         if(null==ruleWeight)return true;
         StrategyRuleEntity strategyRuleEntity=repository.queryStrategyRule(strategyId,ruleWeight);
@@ -86,6 +86,12 @@ public class StrategyArmoryDispatch implements IStrategyArmory,IStrategyDispatch
     @Override
     public Integer getRandomAwardId(Long strategyId,String ruleWeightValue) {
         String key=String.valueOf(strategyId).concat(Constants.UNDERLINE).concat(ruleWeightValue);
+
+        return getRandomAwardId(key);
+    }
+
+    @Override
+    public Integer getRandomAwardId(String key) {
         int rateRange=repository.getRateRange(key);
         return repository.getStrategyAwardAssemble(key,new SecureRandom().nextInt(rateRange));
     }

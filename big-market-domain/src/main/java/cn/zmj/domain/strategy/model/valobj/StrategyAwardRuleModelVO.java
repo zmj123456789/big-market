@@ -1,6 +1,6 @@
 package cn.zmj.domain.strategy.model.valobj;
 
-import cn.zmj.domain.strategy.service.rule.factory.DefaultLogicFactory;
+import cn.zmj.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
 import cn.zmj.types.common.Constants;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,7 +8,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**

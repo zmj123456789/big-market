@@ -80,7 +80,7 @@ public class StrateRepository implements IStrategyRepository {
     }
 
     @Override
-    public StrategyEntity queryStrategyByStrategyId(Long strategyId) {
+    public StrategyEntity queryStrategyEntityByStrategyId(Long strategyId) {
         String cacheKey=Constants.RedisKey.STRATEGY_KEY+strategyId;
         StrategyEntity strategyEntity = redisService.getValue(cacheKey);
         if(null!=strategyEntity)return strategyEntity;
@@ -119,6 +119,11 @@ public class StrateRepository implements IStrategyRepository {
         strategyRule.setAwardId(awardId);
         strategyRule.setRuleModel(ruleModel);
         return strategyRuleDao.queryStrategyRuleValue(strategyRule);
+    }
+
+    @Override
+    public String queryStrategyRuleValue(Long strategyId, String ruleModel) {
+        return queryStrategyRuleValue(strategyId,null,ruleModel);
     }
 
     @Override

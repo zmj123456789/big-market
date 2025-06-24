@@ -1,4 +1,4 @@
-package cn.zmj.domain.strategy.service.raffle;
+package cn.zmj.domain.strategy.service;
 
 import cn.zmj.domain.strategy.model.entity.RaffleAwardEntity;
 import cn.zmj.domain.strategy.model.entity.RaffleFactorEntity;
@@ -7,9 +7,10 @@ import cn.zmj.domain.strategy.model.entity.StrategyEntity;
 import cn.zmj.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import cn.zmj.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import cn.zmj.domain.strategy.repository.IStrategyRepository;
-import cn.zmj.domain.strategy.service.IRaffleStrategy;
 import cn.zmj.domain.strategy.service.armory.IStrategyDispatch;
-import cn.zmj.domain.strategy.service.rule.factory.DefaultLogicFactory;
+import cn.zmj.domain.strategy.service.rule.chain.ILogiChain;
+import cn.zmj.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
+import cn.zmj.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
 import cn.zmj.types.enums.ResponseCode;
 import cn.zmj.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
@@ -24,10 +25,12 @@ import org.apache.commons.lang3.StringUtils;
 public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
     protected IStrategyRepository repository;
     protected IStrategyDispatch strategyDispatch;
+    private final DefaultChainFactory defaultChainFactory;
 
-    public AbstractRaffleStrategy(IStrategyDispatch strategyDispatch, IStrategyRepository repository) {
+    public AbstractRaffleStrategy(IStrategyDispatch strategyDispatch, IStrategyRepository repository,DefaultChainFactory defaultChainFactory) {
         this.strategyDispatch = strategyDispatch;
         this.repository = repository;
+        this.defaultChainFactory=defaultChainFactory;
     }
     @Override
     public RaffleAwardEntity performRaffle(RaffleFactorEntity raffleFactoryEntity){
@@ -37,26 +40,12 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
         if (null == strategyId || StringUtils.isBlank(userId)) {
             throw new AppException(ResponseCode.ILLEGAL_PARAMETER.getCode(), ResponseCode.ILLEGAL_PARAMETER.getInfo());
         }
-        //策略查询
-        StrategyEntity strategy = repository.queryStrategyByStrategyId(strategyId);
+        ILogiChain logicChain = defaultChainFactory.openLogicChain(strategyId);
+
+
         //抽奖前,规则过滤
-        RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> ruleActionBeforeEntity = this.doCheckRaffleBeforeLogic(RaffleFactorEntity.builder().userId(userId).strategyId(strategyId).build(), strategy.ruleModels());
-        if(RuleLogicCheckTypeVO.TAKE_OVER.getCode().equals(ruleActionBeforeEntity.getCode())){
-            if(DefaultLogicFactory.LogicModel.RULE_BLACKLIST.getCode().equals(ruleActionBeforeEntity.getRuleModel())){
-                //黑名单返回固定的奖品id
-                return RaffleAwardEntity.builder().awardId(ruleActionBeforeEntity.getData().getAwardId()).build();
-            }else if(DefaultLogicFactory.LogicModel.RULE_WIGHT.getCode().equals(ruleActionBeforeEntity.getRuleModel())){
-                // 权重根据返回的信息进行抽奖
-                RuleActionEntity.RaffleBeforeEntity raffleBeforeEntity=ruleActionBeforeEntity.getData();
-                String ruleWeightValueKey = raffleBeforeEntity.getRuleWeightValueKey();
-                Integer randomAwardId = strategyDispatch.getRandomAwardId(strategyId, ruleWeightValueKey);
-                return RaffleAwardEntity.builder().awardId(randomAwardId).build();
+        Integer awardId=logicChain.logic(userId,strategyId);
 
-
-            }
-        }
-        //默认抽奖流程
-        Integer awardId=strategyDispatch.getRandomAwardId(strategyId);
         //查询奖品规则「抽奖中（拿到奖品ID时，过滤规则）、抽奖后（扣减完奖品库存后过滤，抽奖中拦截和无库存则走兜底）」
         StrategyAwardRuleModelVO strategyAwardRuleModelVO = repository.queryStrategyAwardRuleModelVO(strategyId, awardId);
         //抽奖中规则过滤
@@ -68,6 +57,5 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
 
         return RaffleAwardEntity.builder().awardId(awardId).build();
     }
-    protected  abstract RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> doCheckRaffleBeforeLogic(RaffleFactorEntity raffleFactorEntity,String... logics);
     protected  abstract RuleActionEntity<RuleActionEntity.RaffleCenterEntity> doCheckRaffleCenterLogic(RaffleFactorEntity raffleFactorEntity,String... logics);
 }
