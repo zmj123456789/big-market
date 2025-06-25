@@ -1,218 +1,291 @@
-25-06-19.09:38:54.195 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 24116 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
-25-06-19.09:38:54.197 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-06-19.09:38:55.450 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-06-19.09:38:55.453 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-06-19.09:38:55.484 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
-25-06-19.09:38:56.245 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-06-19.09:38:56.253 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-06-19.09:38:56.253 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-06-19.09:38:56.253 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-06-19.09:38:56.352 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-06-19.09:38:56.352 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2095 ms
-25-06-19.09:38:57.005 [main            ] INFO  Version                - Redisson 3.23.4
-25-06-19.09:38:57.265 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 10.12.54.43/10.12.54.43:6380
-25-06-19.09:38:57.327 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 10.12.54.43/10.12.54.43:6380
-25-06-19.09:38:58.047 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-06-19.09:38:58.073 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-06-19.09:38:58.085 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-06-19.09:38:58.100 [main            ] INFO  Application            - Started Application in 4.449 seconds (JVM running for 6.316)
-25-06-19.20:19:06.289 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 17952 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
-25-06-19.20:19:06.290 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-06-19.20:19:06.973 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-06-19.20:19:06.976 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-06-19.20:19:07.001 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
-25-06-19.20:19:07.729 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-06-19.20:19:07.738 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-06-19.20:19:07.739 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-06-19.20:19:07.739 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-06-19.20:19:07.860 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-06-19.20:19:07.860 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1534 ms
-25-06-19.20:19:08.462 [main            ] INFO  Version                - Redisson 3.23.4
-25-06-19.20:19:08.706 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 10.12.54.43/10.12.54.43:6380
-25-06-19.20:19:08.724 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 10.12.54.43/10.12.54.43:6380
-25-06-19.20:19:09.453 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-06-19.20:19:09.487 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-06-19.20:19:09.498 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-06-19.20:19:09.514 [main            ] INFO  Application            - Started Application in 3.585 seconds (JVM running for 5.421)
-25-06-19.20:19:10.101 [RMI TCP Connection(1)-10.12.42.138] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-06-19.20:19:10.102 [RMI TCP Connection(1)-10.12.42.138] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-06-19.20:19:10.103 [RMI TCP Connection(1)-10.12.42.138] INFO  DispatcherServlet      - Completed initialization in 1 ms
-25-06-19.20:19:10.113 [RMI TCP Connection(3)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-06-19.20:19:10.549 [RMI TCP Connection(3)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-06-19.20:42:03.477 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-06-19.20:42:03.506 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-06-19.20:42:06.670 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 20148 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
-25-06-19.20:42:06.671 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-06-19.20:42:07.366 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-06-19.20:42:07.368 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-06-19.20:42:07.396 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-25-06-19.20:42:08.046 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-06-19.20:42:08.054 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-06-19.20:42:08.054 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-06-19.20:42:08.054 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-06-19.20:42:08.150 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-06-19.20:42:08.150 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1443 ms
-25-06-19.20:42:09.425 [main            ] INFO  Version                - Redisson 3.23.4
-25-06-19.20:42:09.920 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 10.12.54.43/10.12.54.43:6380
-25-06-19.20:42:09.955 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 10.12.54.43/10.12.54.43:6380
-25-06-19.20:42:11.153 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-06-19.20:42:11.200 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-06-19.20:42:11.221 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-06-19.20:42:11.244 [main            ] INFO  Application            - Started Application in 4.996 seconds (JVM running for 5.757)
-25-06-19.20:42:11.776 [RMI TCP Connection(5)-10.12.42.138] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-06-19.20:42:11.776 [RMI TCP Connection(5)-10.12.42.138] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-06-19.20:42:11.777 [RMI TCP Connection(4)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-06-19.20:42:11.777 [RMI TCP Connection(5)-10.12.42.138] INFO  DispatcherServlet      - Completed initialization in 1 ms
-25-06-19.20:42:12.740 [RMI TCP Connection(4)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-06-19.20:46:40.779 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-06-19.20:46:40.804 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-06-19.20:46:47.053 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 11556 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
-25-06-19.20:46:47.055 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-06-19.20:46:47.814 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-06-19.20:46:47.817 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-06-19.20:46:47.842 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
-25-06-19.20:46:48.480 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-06-19.20:46:48.489 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-06-19.20:46:48.489 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-06-19.20:46:48.489 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-06-19.20:46:48.597 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-06-19.20:46:48.598 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1504 ms
-25-06-19.20:46:49.180 [main            ] INFO  Version                - Redisson 3.23.4
-25-06-19.20:46:49.412 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 10.12.54.43/10.12.54.43:6380
-25-06-19.20:46:49.429 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 10.12.54.43/10.12.54.43:6380
-25-06-19.20:46:50.050 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-06-19.20:46:50.077 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-06-19.20:46:50.086 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-06-19.20:46:50.099 [main            ] INFO  Application            - Started Application in 3.621 seconds (JVM running for 4.168)
-25-06-19.20:46:50.316 [RMI TCP Connection(2)-10.12.42.138] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-06-19.20:46:50.317 [RMI TCP Connection(2)-10.12.42.138] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-06-19.20:46:50.318 [RMI TCP Connection(3)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-06-19.20:46:50.319 [RMI TCP Connection(2)-10.12.42.138] INFO  DispatcherServlet      - Completed initialization in 2 ms
-25-06-19.20:46:50.722 [RMI TCP Connection(3)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-06-19.20:54:46.181 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-06-19.20:54:46.236 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-06-19.20:54:49.581 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 10168 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
-25-06-19.20:54:49.586 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-06-19.20:54:50.542 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-06-19.20:54:50.544 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-06-19.20:54:50.579 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
-25-06-19.20:54:51.322 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-06-19.20:54:51.330 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-06-19.20:54:51.331 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-06-19.20:54:51.331 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-06-19.20:54:51.446 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-06-19.20:54:51.447 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1804 ms
-25-06-19.20:54:52.042 [main            ] INFO  Version                - Redisson 3.23.4
-25-06-19.20:54:52.279 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 10.12.54.43/10.12.54.43:6380
-25-06-19.20:54:52.299 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 10.12.54.43/10.12.54.43:6380
-25-06-19.20:54:53.045 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-06-19.20:54:53.084 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-06-19.20:54:53.098 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-06-19.20:54:53.115 [main            ] INFO  Application            - Started Application in 4.034 seconds (JVM running for 4.631)
-25-06-19.20:54:53.368 [RMI TCP Connection(4)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-06-19.20:54:53.370 [RMI TCP Connection(3)-10.12.42.138] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-06-19.20:54:53.370 [RMI TCP Connection(3)-10.12.42.138] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-06-19.20:54:53.373 [RMI TCP Connection(3)-10.12.42.138] INFO  DispatcherServlet      - Completed initialization in 3 ms
-25-06-19.20:54:53.772 [RMI TCP Connection(4)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-06-19.20:56:17.051 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-06-19.20:56:17.077 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-06-19.20:56:25.524 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 9456 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
-25-06-19.20:56:25.525 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-06-19.20:56:26.224 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-06-19.20:56:26.226 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-06-19.20:56:26.251 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
-25-06-19.20:56:26.921 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-06-19.20:56:26.929 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-06-19.20:56:26.929 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-06-19.20:56:26.929 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-06-19.20:56:27.034 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-06-19.20:56:27.034 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1467 ms
-25-06-19.20:56:27.642 [main            ] INFO  Version                - Redisson 3.23.4
-25-06-19.20:56:27.910 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 10.12.54.43/10.12.54.43:6380
-25-06-19.20:56:27.937 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 10.12.54.43/10.12.54.43:6380
-25-06-19.20:56:29.691 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-06-19.20:56:29.737 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-06-19.20:56:29.755 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-06-19.20:56:29.776 [main            ] INFO  Application            - Started Application in 4.745 seconds (JVM running for 5.368)
-25-06-19.20:56:30.114 [RMI TCP Connection(2)-10.12.42.138] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-06-19.20:56:30.114 [RMI TCP Connection(2)-10.12.42.138] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-06-19.20:56:30.115 [RMI TCP Connection(2)-10.12.42.138] INFO  DispatcherServlet      - Completed initialization in 1 ms
-25-06-19.20:56:30.116 [RMI TCP Connection(3)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-06-19.20:56:30.802 [RMI TCP Connection(3)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-06-19.21:11:30.589 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-06-19.21:11:30.612 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-06-22.17:52:03.771 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 3708 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
-25-06-22.17:52:03.772 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-06-22.17:52:05.021 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-06-22.17:52:05.026 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-06-22.17:52:05.059 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-25-06-22.17:52:05.975 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-06-22.17:52:05.984 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-06-22.17:52:05.984 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-06-22.17:52:05.984 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-06-22.17:52:06.103 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-06-22.17:52:06.103 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2252 ms
-25-06-22.17:52:06.861 [main            ] INFO  Version                - Redisson 3.23.4
-25-06-22.17:52:07.185 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 10.12.54.43/10.12.54.43:6380
-25-06-22.17:52:07.207 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 10.12.54.43/10.12.54.43:6380
-25-06-22.17:52:08.059 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-06-22.17:52:08.096 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-06-22.17:52:08.109 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-06-22.17:52:08.124 [main            ] INFO  Application            - Started Application in 5.03 seconds (JVM running for 6.287)
-25-06-22.17:52:08.542 [RMI TCP Connection(3)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-06-22.17:52:08.547 [RMI TCP Connection(4)-10.12.42.138] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-06-22.17:52:08.547 [RMI TCP Connection(4)-10.12.42.138] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-06-22.17:52:08.549 [RMI TCP Connection(4)-10.12.42.138] INFO  DispatcherServlet      - Completed initialization in 2 ms
-25-06-22.17:52:09.070 [RMI TCP Connection(3)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-06-22.17:54:57.325 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-06-22.17:54:57.336 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-06-22.19:02:12.871 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 26572 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
-25-06-22.19:02:12.872 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-06-22.19:02:13.668 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-06-22.19:02:13.671 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-06-22.19:02:13.700 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
-25-06-22.19:02:14.441 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-06-22.19:02:14.450 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-06-22.19:02:14.451 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-06-22.19:02:14.451 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-06-22.19:02:14.565 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-06-22.19:02:14.566 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1653 ms
-25-06-22.19:02:15.183 [main            ] INFO  Version                - Redisson 3.23.4
-25-06-22.19:02:15.445 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 10.12.54.43/10.12.54.43:6380
-25-06-22.19:02:15.470 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 10.12.54.43/10.12.54.43:6380
-25-06-22.19:02:16.184 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-06-22.19:02:16.218 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-06-22.19:02:16.231 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-06-22.19:02:16.251 [main            ] INFO  Application            - Started Application in 3.849 seconds (JVM running for 4.625)
-25-06-22.19:02:16.646 [RMI TCP Connection(3)-10.12.42.138] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-06-22.19:02:16.647 [RMI TCP Connection(3)-10.12.42.138] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-06-22.19:02:16.648 [RMI TCP Connection(3)-10.12.42.138] INFO  DispatcherServlet      - Completed initialization in 1 ms
-25-06-22.19:02:16.665 [RMI TCP Connection(5)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-06-22.19:02:17.063 [RMI TCP Connection(5)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-06-22.19:08:20.551 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-06-22.19:08:20.621 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-06-22.21:28:26.310 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 6004 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
-25-06-22.21:28:26.311 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-06-22.21:28:27.229 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-06-22.21:28:27.231 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-06-22.21:28:27.265 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
-25-06-22.21:28:28.048 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-06-22.21:28:28.060 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-06-22.21:28:28.061 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-06-22.21:28:28.061 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-06-22.21:28:28.220 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-06-22.21:28:28.220 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1864 ms
-25-06-22.21:28:28.956 [main            ] INFO  Version                - Redisson 3.23.4
-25-06-22.21:28:29.196 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 10.12.54.43/10.12.54.43:6380
-25-06-22.21:28:29.212 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 10.12.54.43/10.12.54.43:6380
-25-06-22.21:28:29.938 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-06-22.21:28:29.966 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-06-22.21:28:29.976 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-06-22.21:28:29.991 [main            ] INFO  Application            - Started Application in 4.161 seconds (JVM running for 4.869)
-25-06-22.21:28:30.396 [RMI TCP Connection(6)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-06-22.21:28:30.431 [RMI TCP Connection(7)-10.12.42.138] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-06-22.21:28:30.431 [RMI TCP Connection(7)-10.12.42.138] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-06-22.21:28:30.432 [RMI TCP Connection(7)-10.12.42.138] INFO  DispatcherServlet      - Completed initialization in 1 ms
-25-06-22.21:28:30.680 [RMI TCP Connection(6)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-06-22.21:29:20.110 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-06-22.21:29:20.119 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-06-24.20:29:22.588 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 12060 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
+25-06-24.20:29:22.590 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-06-24.20:29:24.495 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-24.20:29:24.498 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-24.20:29:24.542 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+25-06-24.20:29:25.509 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-06-24.20:29:25.519 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-06-24.20:29:25.519 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-06-24.20:29:25.519 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-06-24.20:29:25.681 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-06-24.20:29:25.681 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2988 ms
+25-06-24.20:29:26.355 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyArmoryDispatch': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strateRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IStrategyAwardDao' defined in file [G:\develop\big-market\big-market\big-market-infrastructure\target\classes\cn\zmj\infrastructure\persistent\dao\IStrategyAwardDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+25-06-24.20:29:26.359 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+25-06-24.20:29:26.378 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+25-06-24.20:29:26.397 [main            ] ERROR SpringApplication      - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyArmoryDispatch': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strateRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IStrategyAwardDao' defined in file [G:\develop\big-market\big-market\big-market-infrastructure\target\classes\cn\zmj\infrastructure\persistent\dao\IStrategyAwardDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at cn.zmj.Application.main(Application.java:12)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strateRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IStrategyAwardDao' defined in file [G:\develop\big-market\big-market\big-market-infrastructure\target\classes\cn\zmj\infrastructure\persistent\dao\IStrategyAwardDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IStrategyAwardDao' defined in file [G:\develop\big-market\big-market\big-market-infrastructure\target\classes\cn\zmj\infrastructure\persistent\dao\IStrategyAwardDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1534)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1519)
+	... 49 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 62 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:633)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:179)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$8fbfca4f.CGLIB$sqlSessionFactory$0(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$8fbfca4f$$FastClassBySpringCGLIB$$48ef60b0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$8fbfca4f.sqlSessionFactory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 63 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:611)
+	... 76 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:263)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:254)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:246)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:119)
+	... 78 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 82 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:196)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 84 common frames omitted
+25-06-24.20:34:03.546 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 23344 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
+25-06-24.20:34:03.549 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-06-24.20:34:04.253 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-24.20:34:04.255 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-24.20:34:04.286 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+25-06-24.20:34:04.939 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-06-24.20:34:04.945 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-06-24.20:34:04.945 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-06-24.20:34:04.946 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-06-24.20:34:05.043 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-06-24.20:34:05.043 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1456 ms
+25-06-24.20:34:05.332 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyArmoryDispatch': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strateRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IStrategyAwardDao' defined in file [G:\develop\big-market\big-market\big-market-infrastructure\target\classes\cn\zmj\infrastructure\persistent\dao\IStrategyAwardDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+25-06-24.20:34:05.335 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+25-06-24.20:34:05.347 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+25-06-24.20:34:05.360 [main            ] ERROR SpringApplication      - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyArmoryDispatch': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strateRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IStrategyAwardDao' defined in file [G:\develop\big-market\big-market\big-market-infrastructure\target\classes\cn\zmj\infrastructure\persistent\dao\IStrategyAwardDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at cn.zmj.Application.main(Application.java:12)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strateRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IStrategyAwardDao' defined in file [G:\develop\big-market\big-market\big-market-infrastructure\target\classes\cn\zmj\infrastructure\persistent\dao\IStrategyAwardDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'IStrategyAwardDao' defined in file [G:\develop\big-market\big-market\big-market-infrastructure\target\classes\cn\zmj\infrastructure\persistent\dao\IStrategyAwardDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1534)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1519)
+	... 49 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 62 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:633)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:179)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$fabd6d66.CGLIB$sqlSessionFactory$1(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$fabd6d66$$FastClassBySpringCGLIB$$eab5b019.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$fabd6d66.sqlSessionFactory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 63 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [G:\develop\big-market\big-market\big-market-app\target\classes\mybatis\mapper\rule_tree_mapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:611)
+	... 76 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:263)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:254)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:246)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:119)
+	... 78 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'cn.bugstack.infrastructure.persistent.po.RuleTree'.  Cause: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 82 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: cn.bugstack.infrastructure.persistent.po.RuleTree
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:196)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 84 common frames omitted
+25-06-24.20:39:46.795 [main            ] INFO  Application            - Starting Application using Java 17.0.1 on DESKTOP-2PMVD87 with PID 16100 (G:\develop\big-market\big-market\big-market-app\target\classes started by 29622 in G:\develop\big-market\big-market)
+25-06-24.20:39:46.796 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-06-24.20:39:47.517 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-06-24.20:39:47.519 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-06-24.20:39:47.546 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+25-06-24.20:39:48.226 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-06-24.20:39:48.235 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-06-24.20:39:48.235 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-06-24.20:39:48.235 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-06-24.20:39:48.338 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-06-24.20:39:48.338 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1504 ms
+25-06-24.20:39:49.108 [main            ] INFO  Version                - Redisson 3.23.4
+25-06-24.20:39:49.441 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 10.12.54.43/10.12.54.43:6380
+25-06-24.20:39:49.493 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 10.12.54.43/10.12.54.43:6380
+25-06-24.20:39:50.506 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-06-24.20:39:50.542 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-06-24.20:39:50.580 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-06-24.20:39:50.593 [main            ] INFO  Application            - Started Application in 4.218 seconds (JVM running for 4.906)
+25-06-24.20:39:50.743 [RMI TCP Connection(1)-10.12.42.138] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-06-24.20:39:50.743 [RMI TCP Connection(1)-10.12.42.138] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-06-24.20:39:50.744 [RMI TCP Connection(1)-10.12.42.138] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-06-24.20:39:50.745 [RMI TCP Connection(3)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-06-24.20:39:51.175 [RMI TCP Connection(3)-10.12.42.138] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-06-24.20:43:25.119 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-06-24.20:43:25.208 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

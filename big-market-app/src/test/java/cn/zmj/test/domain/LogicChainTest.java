@@ -1,9 +1,10 @@
 package cn.zmj.test.domain;
 
-import cn.zmj.domain.strategy.service.rule.chain.ILogiChain;
+import cn.zmj.domain.strategy.service.rule.chain.ILogicChain;
 import cn.zmj.domain.strategy.service.armory.IStrategyArmory;
 import cn.zmj.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
 import cn.zmj.domain.strategy.service.rule.chain.impl.RuleWeightLogicChain;
+import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
 import org.junit.Test;
@@ -41,9 +42,10 @@ public class LogicChainTest {
 
     @Test
     public void test_LogicChain_rule_blacklist() {
-        ILogiChain logicChain = defaultChainFactory.openLogicChain(100003L);
-        Integer awardId = logicChain.logic("user001", 100003L);
-        log.info("测试结果：{}", awardId);
+        ILogicChain logicChain = defaultChainFactory.openLogicChain(100003L);
+        DefaultChainFactory.StrategyAwardVO strategyAwardVO = logicChain.logic("user001", 100003L);
+
+        log.info("测试结果：{}", JSON.toJSONString(strategyAwardVO));
     }
 
     @Test
@@ -51,16 +53,16 @@ public class LogicChainTest {
         // 通过反射 mock 规则中的值
         ReflectionTestUtils.setField(ruleWeightLogicChain, "userScore", 4900L);
 
-        ILogiChain logicChain = defaultChainFactory.openLogicChain(100001L);
-        Integer awardId = logicChain.logic("xiaofuge", 100001L);
-        log.info("测试结果：{}", awardId);
+        ILogicChain logicChain = defaultChainFactory.openLogicChain(100001L);
+        DefaultChainFactory.StrategyAwardVO strategyAwardVO = logicChain.logic("xiaofuge", 100001L);
+        log.info("测试结果：{}", JSON.toJSONString(strategyAwardVO));
     }
 
     @Test
     public void test_LogicChain_rule_default() {
-        ILogiChain logicChain = defaultChainFactory.openLogicChain(100001L);
-        Integer awardId = logicChain.logic("xiaofuge", 100001L);
-        log.info("测试结果：{}", awardId);
+        ILogicChain logicChain = defaultChainFactory.openLogicChain(100001L);
+        DefaultChainFactory.StrategyAwardVO strategyAwardVO = logicChain.logic("xiaofuge", 100001L);
+        log.info("测试结果：{}", JSON.toJSONString(strategyAwardVO));
     }
 
 }

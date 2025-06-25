@@ -3,6 +3,7 @@ package cn.zmj.domain.strategy.repository;
 import cn.zmj.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.zmj.domain.strategy.model.entity.StrategyEntity;
 import cn.zmj.domain.strategy.model.entity.StrategyRuleEntity;
+import cn.zmj.domain.strategy.model.valobj.RuleTreeVO;
 import cn.zmj.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 
 import java.math.BigDecimal;
@@ -27,4 +28,5 @@ public interface IStrategyRepository {
     String queryStrategyRuleValue(Long strategyId, String ruleModel);
 
     StrategyAwardRuleModelVO queryStrategyAwardRuleModelVO(Long strategyId, Integer awardId);
+    RuleTreeVO queryRuleTreeVOByTreeId(String treeId);
 }

@@ -1,15 +1,15 @@
 package cn.zmj.domain.strategy.service.rule.chain;
 
-public abstract class AbstractLogicChain implements  ILogiChain{
-    private ILogiChain next;
+public abstract class AbstractLogicChain implements ILogicChain {
+    private ILogicChain next;
 
     @Override
-    public ILogiChain next() {
+    public ILogicChain next() {
         return next;
     }
 
     @Override
-    public ILogiChain appendNext(ILogiChain next) {
+    public ILogicChain appendNext(ILogicChain next) {
         this.next=next;
         return next;
     }
