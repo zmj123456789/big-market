@@ -13,12 +13,19 @@ import java.math.BigDecimal;
 public class StrategyAwardEntity {
     /**抽奖策略id*/
     private Long strategy_id;
-    /**抽奖奖品id*/
+    /**抽奖奖品id - 内部流转使用 */
     private Integer awardId;
+    /** 抽奖奖品标题 */
+    private String awardTitle;
+    /** 抽奖奖品副标题 */
+    private String awardSubtitle;
     /**奖品库存数量*/
     private Integer awardCount;
     /**抽奖库存剩余*/
     private Integer awardCountSurplus;
     /**抽奖中奖概率*/
     private BigDecimal awardRate;
+    /** 排序 */
+    private Integer sort;
+
 }

@@ -7,9 +7,11 @@ import java.util.List;
 
 @Mapper
 public interface IStrategyAwardDao {
-    List<StrategyAward> queryStrategyAward();
+    StrategyAward queryStrategyAward(StrategyAward strategyAward);
 
     List<StrategyAward> queryStrategyAwardListByStrategyId(Long strategyId);
 
     String queryStrategyAwardRuleModels(StrategyAward strategyAward);
+
+    void updateStrategyAwardStock(StrategyAward strategyAward);
 }
