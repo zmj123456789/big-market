@@ -1,4 +1,4 @@
-package cn.zmj.test.domain;
+package cn.zmj.test.domain.strategy;
 
 
 import cn.zmj.domain.strategy.model.valobj.RuleTreeVO;

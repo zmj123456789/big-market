@@ -1,4 +1,4 @@
-package cn.zmj.test.domain;
+package cn.zmj.test.domain.strategy;
 
 import cn.zmj.domain.strategy.service.armory.IStrategyArmory;
 import cn.zmj.domain.strategy.service.armory.IStrategyDispatch;
