@@ -1,5 +1,6 @@
 package cn.zmj.domain.activity.model.entity;
 
+import cn.zmj.domain.activity.model.valobj.OrderStateVO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,6 +19,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class ActivityOrderEntity {
     private String userId;
+    private Long sku;
     private Long activityId;
     private String activityName;
     private Long strategyId;
@@ -34,5 +36,6 @@ public class ActivityOrderEntity {
      * 月次数
      */
     private Integer monthCount;
-    private String state;
+    private OrderStateVO state;
+    private String outBusinessNo;
 }

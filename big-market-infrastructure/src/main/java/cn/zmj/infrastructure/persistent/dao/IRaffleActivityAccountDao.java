@@ -1,5 +1,6 @@
 package cn.zmj.infrastructure.persistent.dao;
 
+import cn.zmj.infrastructure.persistent.po.RaffleActivityAccount;
 import org.apache.ibatis.annotations.Mapper;
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥
@@ -9,5 +10,6 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface IRaffleActivityAccountDao {
-
+    void insert(RaffleActivityAccount raffleActivityAccount);
+    int updateAccountQuota(RaffleActivityAccount raffleActivityAccount);
 }

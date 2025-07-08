@@ -13,6 +13,10 @@ import java.util.Date;
 public class RaffleActivityOrder {
     private Long id;
     private String userId;
+    /**
+     * sku
+     */
+    private Long sku;
     private Long activityId;
     private String activityName;
     private Long strategyId;
@@ -30,6 +34,10 @@ public class RaffleActivityOrder {
      */
     private Integer monthCount;
     private String state;
+    /**
+     * 业务仿重ID - 外部透传的，确保幂等
+     */
+    private String outBusinessNo;
     private Date createTime;
     private Date updateTime;
 }
