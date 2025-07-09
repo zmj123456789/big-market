@@ -5,6 +5,7 @@ server:
       max: 200
       min-spare: 50
     accept-count: 10
+
 # 应用配置
 app:
   config:
@@ -23,6 +24,18 @@ thread:
         keep-alive-time: 5000
         block-queue-size: 5000
         policy: CallerRunsPolicy
+# Spring 配置；rabbitmq
+spring:
+  rabbitmq:
+    addresses: 10.12.54.43
+    port: 5672
+    username: admin
+    password: password
+    listener:
+      simple:
+        prefetch: 1
+    topic:
+      activity_sku_stock_zero: activity_sku_stock_zero
 
 # 数据库配置；启动时配置数据库资源信息
 #spring:

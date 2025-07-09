@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
  * @author Fuzhengwei bugstack.cn @小傅哥
  * @description 下单聚合对象
  * @create 2024-03-16 10:32
+ * 聚合订单实体和账户实体，保证事务的最终一致性
  */
 @Data
 @Builder

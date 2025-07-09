@@ -1,5 +1,6 @@
 package cn.zmj.domain.activity.model.entity;
 
+import cn.zmj.domain.activity.model.valobj.ActivityStateVO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,5 +24,5 @@ public class ActivityEntity {
     private Date beginDateTime;
     private Date endDateTime;
     private Long strategyId;
-    private String state;
+    private ActivityStateVO state;
 }

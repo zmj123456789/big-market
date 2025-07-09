@@ -48,16 +48,24 @@
             <option name="tableUIInfoList">
               <list>
                 <TableUIInfo>
-                  <option name="className" value="RaffleActivity" />
-                  <option name="tableName" value="raffle_activity" />
+                  <option name="className" value="Task" />
+                  <option name="tableName" value="task" />
                 </TableUIInfo>
                 <TableUIInfo>
-                  <option name="className" value="RaffleActivityCount" />
-                  <option name="tableName" value="raffle_activity_count" />
+                  <option name="className" value="RaffleActivityAccountDay" />
+                  <option name="tableName" value="raffle_activity_account_day" />
                 </TableUIInfo>
                 <TableUIInfo>
-                  <option name="className" value="RaffleActivitySku" />
-                  <option name="tableName" value="raffle_activity_sku" />
+                  <option name="className" value="RaffleActivityAccountMonth" />
+                  <option name="tableName" value="raffle_activity_account_month" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="UserAwardRecord000" />
+                  <option name="tableName" value="user_award_record_000" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="UserRaffleOrder000" />
+                  <option name="tableName" value="user_raffle_order_000" />
                 </TableUIInfo>
               </list>
             </option>
