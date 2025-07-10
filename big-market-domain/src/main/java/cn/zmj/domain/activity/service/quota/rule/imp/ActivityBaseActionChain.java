@@ -1,13 +1,12 @@
-package cn.zmj.domain.activity.service.rule.imp;
+package cn.zmj.domain.activity.service.quota.rule.imp;
 
 import cn.zmj.domain.activity.model.entity.ActivityCountEntity;
 import cn.zmj.domain.activity.model.entity.ActivityEntity;
 import cn.zmj.domain.activity.model.entity.ActivitySkuEntity;
 import cn.zmj.domain.activity.model.valobj.ActivityStateVO;
-import cn.zmj.domain.activity.service.rule.AbstractActionChain;
+import cn.zmj.domain.activity.service.quota.rule.AbstractActionChain;
 import cn.zmj.types.enums.ResponseCode;
 import cn.zmj.types.exception.AppException;
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 

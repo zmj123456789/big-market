@@ -1,6 +1,6 @@
 package cn.zmj.trigger.listener;
 
-import cn.zmj.domain.activity.service.ISkuStock;
+import cn.zmj.domain.activity.service.IRaffleActivitySjuStockService;
 import cn.zmj.types.event.BaseEvent;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
@@ -19,7 +19,7 @@ public class ActivitySkuStockZeroConsumer {
     private String topic;
 
     @Resource
-    private ISkuStock skuStock;
+    private IRaffleActivitySjuStockService skuStock;
 
     @RabbitListener(queuesToDeclare = @Queue(value="activity_sku_stock_zero"))
     public void listener(String message){

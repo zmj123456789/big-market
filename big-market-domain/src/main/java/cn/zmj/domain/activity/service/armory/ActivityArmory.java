@@ -2,9 +2,7 @@ package cn.zmj.domain.activity.service.armory;
 
 import cn.zmj.domain.activity.model.entity.ActivitySkuEntity;
 import cn.zmj.domain.activity.repository.IActivityRepository;
-import cn.zmj.domain.activity.service.rule.IActionChain;
 import cn.zmj.types.common.Constants;
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

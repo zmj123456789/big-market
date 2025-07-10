@@ -1,11 +1,9 @@
 package cn.zmj.test.domain.activity;
 
-import cn.zmj.domain.activity.model.entity.ActivityOrderEntity;
 import cn.zmj.domain.activity.model.entity.SkuRechargeEntity;
-import cn.zmj.domain.activity.service.IRaffleOrder;
+import cn.zmj.domain.activity.service.IRaffleActivityAccountQuotaService;
 import cn.zmj.domain.activity.service.armory.IActivityArmory;
 import cn.zmj.types.exception.AppException;
-import com.alibaba.fastjson2.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Before;
@@ -22,7 +20,7 @@ import java.util.concurrent.CountDownLatch;
 @RunWith(SpringRunner.class)
 public class RaffleOrderTest {
     @Resource
-    private IRaffleOrder raffleOrder;
+    private IRaffleActivityAccountQuotaService raffleOrder;
     @Resource
     private IActivityArmory activityArmory;
     @Before

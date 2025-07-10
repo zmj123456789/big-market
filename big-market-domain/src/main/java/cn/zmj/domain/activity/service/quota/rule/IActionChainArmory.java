@@ -1,4 +1,4 @@
-package cn.zmj.domain.activity.service.rule;
+package cn.zmj.domain.activity.service.quota.rule;
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥
  * @description

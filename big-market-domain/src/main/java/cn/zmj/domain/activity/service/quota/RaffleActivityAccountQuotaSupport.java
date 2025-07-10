@@ -1,12 +1,10 @@
-package cn.zmj.domain.activity.service;
+package cn.zmj.domain.activity.service.quota;
 
 import cn.zmj.domain.activity.model.entity.ActivityCountEntity;
 import cn.zmj.domain.activity.model.entity.ActivityEntity;
 import cn.zmj.domain.activity.model.entity.ActivitySkuEntity;
 import cn.zmj.domain.activity.repository.IActivityRepository;
-import cn.zmj.domain.activity.service.rule.factory.DefaultActivityChainFactory;
-import cn.zmj.domain.activity.service.rule.imp.ActivitySkuStockActionChain;
-import cn.zmj.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
+import cn.zmj.domain.activity.service.quota.rule.factory.DefaultActivityChainFactory;
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥
@@ -14,11 +12,11 @@ import cn.zmj.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
  * @create 2024-03-23 09:27
  */
 
-public class RaffleActivitySupport{
+public class RaffleActivityAccountQuotaSupport {
     protected DefaultActivityChainFactory defaultActivityChainFactory;
     protected IActivityRepository activityRepository;
 
-    public RaffleActivitySupport(DefaultActivityChainFactory defaultActivityChainFactory, IActivityRepository activityRepository) {
+    public RaffleActivityAccountQuotaSupport(DefaultActivityChainFactory defaultActivityChainFactory, IActivityRepository activityRepository) {
         this.defaultActivityChainFactory = defaultActivityChainFactory;
         this.activityRepository = activityRepository;
     }

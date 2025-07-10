@@ -1,13 +1,13 @@
-package cn.zmj.domain.activity.service;
+package cn.zmj.domain.activity.service.quota;
 
-import cn.zmj.domain.activity.model.aggregate.CreateOrderAggregate;
+import cn.zmj.domain.activity.model.aggregate.CreateQuotaOrderAggregate;
 import cn.zmj.domain.activity.model.entity.*;
 import cn.zmj.domain.activity.repository.IActivityRepository;
-import cn.zmj.domain.activity.service.rule.IActionChain;
-import cn.zmj.domain.activity.service.rule.factory.DefaultActivityChainFactory;
+import cn.zmj.domain.activity.service.IRaffleActivityAccountQuotaService;
+import cn.zmj.domain.activity.service.quota.rule.IActionChain;
+import cn.zmj.domain.activity.service.quota.rule.factory.DefaultActivityChainFactory;
 import cn.zmj.types.enums.ResponseCode;
 import cn.zmj.types.exception.AppException;
-import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
@@ -15,8 +15,8 @@ import org.apache.commons.lang3.StringUtils;
  * 流程比较复杂时使用抽象类，定义出标准流程，给子类实现
  */
 @Slf4j
-public abstract class AbstractRaffleActivity extends RaffleActivitySupport implements IRaffleOrder{
-    public AbstractRaffleActivity(DefaultActivityChainFactory defaultActivityChainFactory, IActivityRepository activityRepository) {
+public abstract class AbstractRaffleActivityAccountQuota extends RaffleActivityAccountQuotaSupport implements IRaffleActivityAccountQuotaService {
+    public AbstractRaffleActivityAccountQuota(DefaultActivityChainFactory defaultActivityChainFactory, IActivityRepository activityRepository) {
         super(defaultActivityChainFactory, activityRepository);
     }
 
@@ -40,13 +40,13 @@ public abstract class AbstractRaffleActivity extends RaffleActivitySupport imple
         IActionChain actionChain = defaultActivityChainFactory.openActionChain();
         actionChain.action(activitySkuEntity, activityEntity, activityCountEntity);
 //        构建订单聚合对象
-        CreateOrderAggregate createOrderAggregate = buildOrderAggregate(skuRechargeEntity, activitySkuEntity, activityEntity, activityCountEntity);
+        CreateQuotaOrderAggregate createQuotaOrderAggregate = buildOrderAggregate(skuRechargeEntity, activitySkuEntity, activityEntity, activityCountEntity);
 //        保存订单
-        doSaveOrder(createOrderAggregate);
+        doSaveOrder(createQuotaOrderAggregate);
 //        返回单号
-        return createOrderAggregate.getActivityOrderEntity().getOrderId();
+        return createQuotaOrderAggregate.getActivityOrderEntity().getOrderId();
     }
 
-    protected abstract CreateOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivitySkuEntity activitySkuEntity, ActivityEntity activityEntity, ActivityCountEntity activityCountEntity) ;
-    protected abstract void doSaveOrder(CreateOrderAggregate createOrderAggregate);
+    protected abstract CreateQuotaOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivitySkuEntity activitySkuEntity, ActivityEntity activityEntity, ActivityCountEntity activityCountEntity) ;
+    protected abstract void doSaveOrder(CreateQuotaOrderAggregate createQuotaOrderAggregate);
 }
