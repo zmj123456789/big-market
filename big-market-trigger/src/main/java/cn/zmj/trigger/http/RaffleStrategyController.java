@@ -6,11 +6,11 @@ import cn.zmj.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.zmj.domain.strategy.service.IRaffleAward;
 import cn.zmj.domain.strategy.service.IRaffleStrategy;
 import cn.zmj.domain.strategy.service.armory.IStrategyArmory;
-import cn.zmj.trigger.api.IRaffleService;
+import cn.zmj.trigger.api.IRaffleStrategyService;
 import cn.zmj.trigger.api.dto.RaffleAwardListRequestDTO;
 import cn.zmj.trigger.api.dto.RaffleAwardListResponseDTO;
-import cn.zmj.trigger.api.dto.RaffleRequestDTO;
-import cn.zmj.trigger.api.dto.RaffleResponseDTO;
+import cn.zmj.trigger.api.dto.RaffleStrategyRequestDTO;
+import cn.zmj.trigger.api.dto.RaffleStrategyResponseDTO;
 import cn.zmj.types.enums.ResponseCode;
 import cn.zmj.types.exception.AppException;
 import cn.zmj.types.model.Response;
@@ -23,10 +23,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
+//Spring MVC 注解，表示这是一个 RESTful 控制器，会自动将返回对象序列化为 JSON
 @RestController()
+//允许跨域请求，配置值来自配置文件
 @CrossOrigin("${app.config.cross-origin}")
+//定义控制器的基础路径，包含配置文件中的 API 版本号
 @RequestMapping("/api/${app.config.api-version}/raffle/")
-public class RaffleController implements IRaffleService {
+public class RaffleStrategyController implements IRaffleStrategyService {
     @Resource
     private IRaffleAward raffleAward;
     @Resource
@@ -112,24 +115,24 @@ public class RaffleController implements IRaffleService {
      */
     @RequestMapping(value="random_raffle",method=RequestMethod.POST)
     @Override
-    public Response<RaffleResponseDTO> randomRaffle(@RequestBody RaffleRequestDTO requestDTO) {
+    public Response<RaffleStrategyResponseDTO> randomRaffle(@RequestBody RaffleStrategyRequestDTO requestDTO) {
         try {
             log.info("随机抽奖开始 strategyId: {}", requestDTO.getStrategyId());
 //        调用抽奖接口
             RaffleAwardEntity raffleAwardEntity = raffleStrategy.performRaffle(RaffleFactorEntity.builder().userId("system").strategyId(requestDTO.getStrategyId()).build());
 //        封装返回结果
-            Response<RaffleResponseDTO> response=Response.<RaffleResponseDTO>builder().code(ResponseCode.SUCCESS.getCode()).info(ResponseCode.SUCCESS.getInfo()).data(RaffleResponseDTO.builder().awardId(raffleAwardEntity.getAwardId()).awardIndex(raffleAwardEntity.getSort()).build()).build();
+            Response<RaffleStrategyResponseDTO> response=Response.<RaffleStrategyResponseDTO>builder().code(ResponseCode.SUCCESS.getCode()).info(ResponseCode.SUCCESS.getInfo()).data(RaffleStrategyResponseDTO.builder().awardId(raffleAwardEntity.getAwardId()).awardIndex(raffleAwardEntity.getSort()).build()).build();
             log.info("随机抽奖完成 strategyId: {} response: {}", requestDTO.getStrategyId(), JSON.toJSONString(response));
             return response;
         } catch (AppException e) {
             log.error("随机抽奖失败 strategyId：{} {}", requestDTO.getStrategyId(), e.getInfo());
-            return Response.<RaffleResponseDTO>builder()
+            return Response.<RaffleStrategyResponseDTO>builder()
                     .code(e.getCode())
                     .info(e.getInfo())
                     .build();
         } catch (Exception e) {
             log.error("随机抽奖失败 strategyId：{}", requestDTO.getStrategyId(), e);
-            return Response.<RaffleResponseDTO>builder()
+            return Response.<RaffleStrategyResponseDTO>builder()
                     .code(ResponseCode.UN_ERROR.getCode())
                     .info(ResponseCode.UN_ERROR.getInfo())
                     .build();

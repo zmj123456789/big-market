@@ -1,6 +1,10 @@
 package cn.zmj.infrastructure.persistent.dao;
 
+import cn.bugstack.middleware.db.router.annotation.DBRouter;
+import cn.zmj.infrastructure.persistent.po.Task;
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
 * @author 29622
@@ -11,6 +15,14 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface ITaskDao {
 
+    List<Task> queryNoSendMessageTaskList();
+    @DBRouter
+    void updateTaskSendMessageCompleted(Task task);
+
+    @DBRouter
+    void updateTaskSendMessageFail(Task task);
+
+    void insert(Task task);
 }
 
 

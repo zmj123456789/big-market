@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RaffleResponseDTO {
+public class RaffleStrategyResponseDTO {
     // 奖品ID
     private Integer awardId;
     // 排序编号【策略奖品配置的奖品顺序编号】

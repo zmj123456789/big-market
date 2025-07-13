@@ -26,7 +26,9 @@ import org.springframework.transaction.TransactionException;
 import org.springframework.transaction.support.TransactionTemplate;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
@@ -335,6 +337,7 @@ public class ActivityRepository implements IActivityRepository {
                                     log.warn("写入创建参与活动记录，更新月账户额度不足，异常 userId: {} activityId: {} month: {}", userId, activityId, activityAccountMonthEntity.getMonth());
                                     throw new AppException(ResponseCode.ACCOUNT_MONTH_QUOTA_ERROR.getCode(), ResponseCode.ACCOUNT_MONTH_QUOTA_ERROR.getInfo());
                                 }
+                                raffleActivityAccountDao.updateActivityAccountMonthSubstractionQuota(RaffleActivityAccount.builder().userId(userId).activityId(activityId).build());
 
                             }else{
                                  raffleActivityAccountMonthDao.insertActivityAccountMonth(RaffleActivityAccountMonth.builder()
@@ -342,7 +345,7 @@ public class ActivityRepository implements IActivityRepository {
                                                                                                                   .activityId(activityAccountMonthEntity.getActivityId())
                                                                                                                   .month(activityAccountMonthEntity.getMonth())
                                                                                                                   .monthCount(activityAccountMonthEntity.getMonthCount())
-                                                                                                                  .monthCountSurplus(activityAccountMonthEntity.getMonthCountSurplus())
+                                                                                                                  .monthCountSurplus(activityAccountMonthEntity.getMonthCountSurplus()-1)
                                                                                                                   .build());
         // 新创建月账户，则更新总账表中月镜像额度
                                 raffleActivityAccountDao.updateActivityAccountMonthSurplusImageQuota(RaffleActivityAccount.builder().userId(userId).activityId(activityId).monthCountSurplus(activityAccountMonthEntity.getMonthCountSurplus()).build());
@@ -360,6 +363,12 @@ public class ActivityRepository implements IActivityRepository {
                                     log.warn("写入创建参与活动记录，更新日账户额度不足，异常 userId: {} activityId: {} day: {}", userId, activityId, activityAccountDayEntity.getDay());
                                     throw new AppException(ResponseCode.ACCOUNT_DAY_QUOTA_ERROR.getCode(), ResponseCode.ACCOUNT_DAY_QUOTA_ERROR.getInfo());
                                 }
+                                // 更新总账户中日镜像库存
+                                raffleActivityAccountDao.updateActivityAccountDaySubstractionQuota(
+                                        RaffleActivityAccount.builder()
+                                                .userId(userId)
+                                                .activityId(activityId)
+                                                .build());
                             } else {
                                 raffleActivityAccountDayDao.insertActivityAccountDay(RaffleActivityAccountDay.builder()
                                         .userId(activityAccountDayEntity.getUserId())
@@ -395,5 +404,21 @@ public class ActivityRepository implements IActivityRepository {
         } finally {
             dbRouter.clear();
         }
+    }
+
+    @Override
+    public List<ActivitySkuEntity> queryRaffleActivitySkuListByActivityId(Long activityId) {
+        List<RaffleActivitySku> raffleActivitySkus=raffleActivitySkuDao.queryActivitySkuListByActivityId(activityId);
+        List<ActivitySkuEntity> activitySkuEntities=new ArrayList<>(raffleActivitySkus.size());
+        for (RaffleActivitySku activitySkus : raffleActivitySkus) {
+            ActivitySkuEntity activitySkuEntity=new ActivitySkuEntity();
+            activitySkuEntity.setSku(activitySkus.getSku());
+            activitySkuEntity.setActivityId(activitySkus.getActivityId());
+            activitySkuEntity.setActivityCountId(activitySkus.getActivityCountId());
+            activitySkuEntity.setStockCount(activitySkus.getStockCount());
+            activitySkuEntity.setStockCountSurplus(activitySkus.getStockCountSurplus());
+            activitySkuEntities.add(activitySkuEntity);
+        }
+        return activitySkuEntities;
     }
 }

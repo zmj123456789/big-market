@@ -2,7 +2,7 @@
 java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.rule.chain.ILogicChain.logic(String, java.lang.Long)" because "logicChain" is null
 	at cn.zmj.domain.strategy.service.raffle.DefaultRaffleStrategy.raffleLogicChain(DefaultRaffleStrategy.java:38)
 	at cn.zmj.domain.strategy.service.AbstractRaffleStrategy.performRaffle(AbstractRaffleStrategy.java:40)
-	at cn.zmj.trigger.http.RaffleController.randomRaffle(RaffleController.java:119)
+	at cn.zmj.trigger.http.RaffleStrategyController.randomRaffle(RaffleController.java:119)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -61,7 +61,7 @@ java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.ru
 java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.rule.chain.ILogicChain.logic(String, java.lang.Long)" because "logicChain" is null
 	at cn.zmj.domain.strategy.service.raffle.DefaultRaffleStrategy.raffleLogicChain(DefaultRaffleStrategy.java:38)
 	at cn.zmj.domain.strategy.service.AbstractRaffleStrategy.performRaffle(AbstractRaffleStrategy.java:40)
-	at cn.zmj.trigger.http.RaffleController.randomRaffle(RaffleController.java:119)
+	at cn.zmj.trigger.http.RaffleStrategyController.randomRaffle(RaffleController.java:119)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -120,7 +120,7 @@ java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.ru
 java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.rule.chain.ILogicChain.logic(String, java.lang.Long)" because "logicChain" is null
 	at cn.zmj.domain.strategy.service.raffle.DefaultRaffleStrategy.raffleLogicChain(DefaultRaffleStrategy.java:38)
 	at cn.zmj.domain.strategy.service.AbstractRaffleStrategy.performRaffle(AbstractRaffleStrategy.java:40)
-	at cn.zmj.trigger.http.RaffleController.randomRaffle(RaffleController.java:119)
+	at cn.zmj.trigger.http.RaffleStrategyController.randomRaffle(RaffleController.java:119)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -189,7 +189,7 @@ org.redisson.client.RedisTimeoutException: Command execution timeout for command
 java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.rule.chain.ILogicChain.logic(String, java.lang.Long)" because "logicChain" is null
 	at cn.zmj.domain.strategy.service.raffle.DefaultRaffleStrategy.raffleLogicChain(DefaultRaffleStrategy.java:38)
 	at cn.zmj.domain.strategy.service.AbstractRaffleStrategy.performRaffle(AbstractRaffleStrategy.java:40)
-	at cn.zmj.trigger.http.RaffleController.randomRaffle(RaffleController.java:119)
+	at cn.zmj.trigger.http.RaffleStrategyController.randomRaffle(RaffleController.java:119)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -248,7 +248,7 @@ java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.ru
 java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.rule.chain.ILogicChain.logic(String, java.lang.Long)" because "logicChain" is null
 	at cn.zmj.domain.strategy.service.raffle.DefaultRaffleStrategy.raffleLogicChain(DefaultRaffleStrategy.java:38)
 	at cn.zmj.domain.strategy.service.AbstractRaffleStrategy.performRaffle(AbstractRaffleStrategy.java:40)
-	at cn.zmj.trigger.http.RaffleController.randomRaffle(RaffleController.java:119)
+	at cn.zmj.trigger.http.RaffleStrategyController.randomRaffle(RaffleController.java:119)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -307,7 +307,7 @@ java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.ru
 java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.rule.chain.ILogicChain.logic(String, java.lang.Long)" because "logicChain" is null
 	at cn.zmj.domain.strategy.service.raffle.DefaultRaffleStrategy.raffleLogicChain(DefaultRaffleStrategy.java:38)
 	at cn.zmj.domain.strategy.service.AbstractRaffleStrategy.performRaffle(AbstractRaffleStrategy.java:40)
-	at cn.zmj.trigger.http.RaffleController.randomRaffle(RaffleController.java:119)
+	at cn.zmj.trigger.http.RaffleStrategyController.randomRaffle(RaffleController.java:119)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -366,7 +366,7 @@ java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.ru
 java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.rule.chain.ILogicChain.logic(String, java.lang.Long)" because "logicChain" is null
 	at cn.zmj.domain.strategy.service.raffle.DefaultRaffleStrategy.raffleLogicChain(DefaultRaffleStrategy.java:38)
 	at cn.zmj.domain.strategy.service.AbstractRaffleStrategy.performRaffle(AbstractRaffleStrategy.java:40)
-	at cn.zmj.trigger.http.RaffleController.randomRaffle(RaffleController.java:119)
+	at cn.zmj.trigger.http.RaffleStrategyController.randomRaffle(RaffleController.java:119)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -425,7 +425,7 @@ java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.ru
 java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.rule.chain.ILogicChain.logic(String, java.lang.Long)" because "logicChain" is null
 	at cn.zmj.domain.strategy.service.raffle.DefaultRaffleStrategy.raffleLogicChain(DefaultRaffleStrategy.java:38)
 	at cn.zmj.domain.strategy.service.AbstractRaffleStrategy.performRaffle(AbstractRaffleStrategy.java:40)
-	at cn.zmj.trigger.http.RaffleController.randomRaffle(RaffleController.java:119)
+	at cn.zmj.trigger.http.RaffleStrategyController.randomRaffle(RaffleController.java:119)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -484,7 +484,7 @@ java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.ru
 java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.rule.chain.ILogicChain.logic(String, java.lang.Long)" because "logicChain" is null
 	at cn.zmj.domain.strategy.service.raffle.DefaultRaffleStrategy.raffleLogicChain(DefaultRaffleStrategy.java:38)
 	at cn.zmj.domain.strategy.service.AbstractRaffleStrategy.performRaffle(AbstractRaffleStrategy.java:40)
-	at cn.zmj.trigger.http.RaffleController.randomRaffle(RaffleController.java:119)
+	at cn.zmj.trigger.http.RaffleStrategyController.randomRaffle(RaffleController.java:119)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -543,7 +543,7 @@ java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.ru
 java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.rule.chain.ILogicChain.logic(String, java.lang.Long)" because "logicChain" is null
 	at cn.zmj.domain.strategy.service.raffle.DefaultRaffleStrategy.raffleLogicChain(DefaultRaffleStrategy.java:38)
 	at cn.zmj.domain.strategy.service.AbstractRaffleStrategy.performRaffle(AbstractRaffleStrategy.java:40)
-	at cn.zmj.trigger.http.RaffleController.randomRaffle(RaffleController.java:119)
+	at cn.zmj.trigger.http.RaffleStrategyController.randomRaffle(RaffleController.java:119)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -602,7 +602,7 @@ java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.ru
 java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.rule.chain.ILogicChain.logic(String, java.lang.Long)" because "logicChain" is null
 	at cn.zmj.domain.strategy.service.raffle.DefaultRaffleStrategy.raffleLogicChain(DefaultRaffleStrategy.java:38)
 	at cn.zmj.domain.strategy.service.AbstractRaffleStrategy.performRaffle(AbstractRaffleStrategy.java:40)
-	at cn.zmj.trigger.http.RaffleController.randomRaffle(RaffleController.java:119)
+	at cn.zmj.trigger.http.RaffleStrategyController.randomRaffle(RaffleController.java:119)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -662,7 +662,7 @@ java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.ru
 java.lang.NullPointerException: Cannot invoke "cn.zmj.domain.strategy.service.rule.chain.ILogicChain.logic(String, java.lang.Long)" because "logicChain" is null
 	at cn.zmj.domain.strategy.service.raffle.DefaultRaffleStrategy.raffleLogicChain(DefaultRaffleStrategy.java:39)
 	at cn.zmj.domain.strategy.service.AbstractRaffleStrategy.performRaffle(AbstractRaffleStrategy.java:40)
-	at cn.zmj.trigger.http.RaffleController.randomRaffle(RaffleController.java:119)
+	at cn.zmj.trigger.http.RaffleStrategyController.randomRaffle(RaffleController.java:119)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

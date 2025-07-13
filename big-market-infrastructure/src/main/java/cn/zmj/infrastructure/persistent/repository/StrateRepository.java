@@ -43,6 +43,10 @@ public class StrateRepository implements IStrategyRepository {
     private IRuleTreeNodeDao ruleTreeNodeDao;
     @Resource
     private IRuleTreeNodeLineDao ruleTreeNodeLineDao;
+    @Resource
+    private IRaffleActivityDao raffleActivityDao;
+    @Resource
+    private IRaffleActivityAccountDayDao raffleActivityAccountDayDao;
 //    从缓存或数据库中查询指定策略的奖品列表，并将结果缓存到 Redis 中，以提高后续访问效率。
     @Override
     public List<StrategyAwardEntity> queryStrategyAwardList(Long strategyId) {
@@ -279,5 +283,24 @@ public class StrateRepository implements IStrategyRepository {
         // 返回数据
         return strategyAwardEntity;
 
+    }
+
+    @Override
+    public Long queryStrategyIdByActivity(Long activityId) {
+        return raffleActivityDao.queryStrategyIdByActivityId(activityId);
+    }
+
+    @Override
+    public Integer queryTodayUserRaffleCount(String userId, Long strategyId) {
+//        活动ID
+        Long activityId = raffleActivityDao.queryActivityIdByStrategyId(strategyId);
+//        封装参数
+        RaffleActivityAccountDay raffleActivityAccountDayReq=new RaffleActivityAccountDay();
+        raffleActivityAccountDayReq.setUserId(userId);
+        raffleActivityAccountDayReq.setActivityId(activityId);
+        raffleActivityAccountDayReq.setDay(raffleActivityAccountDayReq.currentDay());
+        RaffleActivityAccountDay raffleActivityAccountDay = raffleActivityAccountDayDao.queryActivityAccountDayByUserId(raffleActivityAccountDayReq);
+        if(raffleActivityAccountDay==null)return 0;
+        return raffleActivityAccountDay.getDayCount()-raffleActivityAccountDay.getDayCountSurplus();
     }
 }

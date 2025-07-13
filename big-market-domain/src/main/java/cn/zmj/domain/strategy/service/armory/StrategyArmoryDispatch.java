@@ -54,6 +54,13 @@ public class StrategyArmoryDispatch implements IStrategyArmory,IStrategyDispatch
         return true;
 
     }
+
+    @Override
+    public boolean assembleLotteryStrategyByActivityId(Long activityId) {
+        Long strategyId=repository.queryStrategyIdByActivity(activityId);
+        return assembleLotteryStrategy(strategyId);
+    }
+
     public void assembleLotteryStrategy(String key,List<StrategyAwardEntity> strategyAwardEntities){
         //获取最小概率值，使用 BigDecimal 是为了避免浮点数精度问题，适用于金融、抽奖等对精度要求高的场景
         BigDecimal minAwardRate= strategyAwardEntities.stream().map(StrategyAwardEntity::getAwardRate).min(BigDecimal::compareTo).orElse(BigDecimal.ZERO);

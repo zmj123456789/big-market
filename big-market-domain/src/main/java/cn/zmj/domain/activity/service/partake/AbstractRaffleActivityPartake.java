@@ -55,6 +55,12 @@ public abstract class AbstractRaffleActivityPartake implements IRaffleActivityPa
 //        返回订单信息
         return userRaffleOrder;
     }
-    protected abstract CreatePartakeOrderAggregate doFilterAccount(String userId,Long activityId,Date currentDate);
+
+    @Override
+    public UserRaffleOrderEntity createOrder(String userId, Long activityId) {
+        return createOrder(PartakeRaffleActivityEntity.builder().userId(userId).activityId(activityId).build());
+    }
+
+    protected abstract CreatePartakeOrderAggregate doFilterAccount(String userId, Long activityId, Date currentDate);
     protected abstract UserRaffleOrderEntity buildUserRaffleOrder(String userId,Long activityId,Date currentDate);
 }
