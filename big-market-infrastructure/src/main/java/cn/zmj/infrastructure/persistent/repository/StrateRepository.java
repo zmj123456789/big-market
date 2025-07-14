@@ -18,10 +18,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 import static cn.zmj.types.enums.ResponseCode.UN_ASSEMBLED_STRATEGY_ARMORY;
@@ -67,6 +64,7 @@ public class StrateRepository implements IStrategyRepository {
                         .awardCountSurplus(strategyAward.getAwardCountSurplus())
                         .awardRate(strategyAward.getAwardRate())
                         .sort(strategyAward.getSort())
+                        .ruleModels(strategyAward.getRuleModels())
                         .build();
             strategyAwardEntities.add(strategyAwardEntity);
         }
@@ -220,13 +218,24 @@ public class StrateRepository implements IStrategyRepository {
 
     @Override
     public Boolean subtractionAwardStock(String cacheKey) {
+        return subtractionAwardStock(cacheKey,null);
+    }
+
+    @Override
+    public Boolean subtractionAwardStock(String cacheKey, Date endDateTime) {
         long surplus = redisService.decr(cacheKey);
         if(surplus<0){
             redisService.setAtomicLong(cacheKey,0);
             return false;
         }
         String lockKey=cacheKey+Constants.UNDERLINE+surplus;
-        Boolean lock = redisService.setNx(lockKey);
+        Boolean lock = false;
+        if(endDateTime!=null){
+            long expireMills=endDateTime.getTime()-System.currentTimeMillis()+TimeUnit.DAYS.toMillis(1);
+            lock = redisService.setNx(lockKey, expireMills, TimeUnit.MILLISECONDS);
+        }else{
+            lock=redisService.setNx(lockKey);
+        }
         if(!lock){
             log.info("策略奖品库存加锁失败{}",lockKey);
         }
@@ -302,5 +311,20 @@ public class StrateRepository implements IStrategyRepository {
         RaffleActivityAccountDay raffleActivityAccountDay = raffleActivityAccountDayDao.queryActivityAccountDayByUserId(raffleActivityAccountDayReq);
         if(raffleActivityAccountDay==null)return 0;
         return raffleActivityAccountDay.getDayCount()-raffleActivityAccountDay.getDayCountSurplus();
+    }
+
+    @Override
+    public Map<String, Integer> queryAwardRuleLockCount(String[] treeIds) {
+        if(treeIds==null||treeIds.length==0)return new HashMap<>();
+        List<RuleTreeNode> ruleTreeNodes=ruleTreeNodeDao.queryRuleLocks(treeIds);
+        Map<String,Integer> resultMap=new HashMap<>();
+        for (RuleTreeNode ruleTreeNode : ruleTreeNodes) {
+            String treeId=ruleTreeNode.getTreeId();
+            Integer ruleValue = Integer.valueOf(ruleTreeNode.getRuleValue());
+            resultMap.put(treeId,ruleValue);
+        }
+        return resultMap;
+
+
     }
 }

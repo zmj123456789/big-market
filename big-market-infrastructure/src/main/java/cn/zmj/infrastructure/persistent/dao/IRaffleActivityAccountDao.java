@@ -2,6 +2,7 @@ package cn.zmj.infrastructure.persistent.dao;
 
 import cn.bugstack.middleware.db.router.annotation.DBRouter;
 import cn.zmj.infrastructure.persistent.po.RaffleActivityAccount;
+import cn.zmj.infrastructure.persistent.po.RaffleActivityAccountDay;
 import org.apache.ibatis.annotations.Mapper;
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥
@@ -21,5 +22,6 @@ public interface IRaffleActivityAccountDao {
     int updateActivityAccountDaySubstractionQuota(RaffleActivityAccount raffleActivityAccount);
     void updateActivityAccountMonthSurplusImageQuota(RaffleActivityAccount raffleActivityAccount);
     void updateActivityAccountDaySurplusImageQuota(RaffleActivityAccount raffleActivityAccount);
+
 
 }

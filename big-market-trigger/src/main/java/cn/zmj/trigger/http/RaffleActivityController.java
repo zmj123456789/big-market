@@ -102,7 +102,7 @@ public class RaffleActivityController implements IRaffleActivityService {
             UserRaffleOrderEntity orderEntity = raffleActivityPartakeService.createOrder(request.getUserId(), request.getActivityId());
             log.info("活动抽奖，创建订单userId:{},activityId:{},orderId:{}",request.getUserId(),request.getActivityId(),orderEntity.getOrderId());
 //        抽奖策略执行抽奖
-            RaffleAwardEntity raffleAwardEntity = raffleStrategy.performRaffle(RaffleFactorEntity.builder().userId(request.getUserId()).strategyId(orderEntity.getStrategyId()).build());
+            RaffleAwardEntity raffleAwardEntity = raffleStrategy.performRaffle(RaffleFactorEntity.builder().userId(request.getUserId()).strategyId(orderEntity.getStrategyId()).endTime(orderEntity.getEndDateTime()).build());
 
 //        存放结果写入中奖记录
             UserAwardRecordEntity userAwardRecordEntity=new UserAwardRecordEntity();

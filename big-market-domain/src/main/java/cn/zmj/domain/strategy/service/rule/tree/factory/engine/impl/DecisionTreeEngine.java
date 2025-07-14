@@ -9,6 +9,7 @@ import cn.zmj.domain.strategy.service.rule.tree.factory.DefaultTreeFactory;
 import cn.zmj.domain.strategy.service.rule.tree.factory.engine.IDecisionTreeEngine;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -23,19 +24,21 @@ public class DecisionTreeEngine implements IDecisionTreeEngine {
     }
 
     @Override
-    public DefaultTreeFactory.StrategyAwardVO process(String userId, Long strategyId, Integer awardId) {
+    public DefaultTreeFactory.StrategyAwardVO process(String userId, Long strategyId, Integer awardId, Date endDateTime) {
         DefaultTreeFactory.StrategyAwardVO strategyAwardData=null;
         //获取基础信息
+//        获取根节点
         String nextNode = ruleTreeVO.getTreeRootRuleNode();
+//        获取该树的所有节点信息
         Map<String, RuleTreeNodeVO> treeNodeMap = ruleTreeVO.getTreeNodeMap();
-        //获取根节点
+        //获取根节点VO
         RuleTreeNodeVO ruleTreeNode = treeNodeMap.get(nextNode);
         while(null!=nextNode){
-            //获取决策节点
+            //根据规则名，获取决策节点的决策对象
             ILogicTreeNode logicTreeNode = logicTreeNodeGroup.get(ruleTreeNode.getRuleKey());
             String ruleValue=ruleTreeNode.getRuleValue();
-            //决策节点计算，调用 rule_lock 节点的 logic 方法，返回 RuleLogicCheckTypeVO.ALLOW
-            DefaultTreeFactory.TreeActionEntity logicEntity = logicTreeNode.logic(userId, strategyId, awardId,ruleValue);
+            //决策节点计算，调用 rule_lock 节点的 logic 方法，返回 RuleLogicCheckTypeVO.ALLOW或者take_over确定下一个节点
+            DefaultTreeFactory.TreeActionEntity logicEntity = logicTreeNode.logic(userId, strategyId, awardId,ruleValue,endDateTime);
             RuleLogicCheckTypeVO ruleLogicCheckTypeVO = logicEntity.getRuleLogicCheckType();
             strategyAwardData= logicEntity.getStrategyAwardVO();
             log.info("决策树引擎【{}】treeId:{} node:{} code:{}", ruleTreeVO.getTreeName(), ruleTreeVO.getTreeId(), nextNode, ruleLogicCheckTypeVO.getCode());

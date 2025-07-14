@@ -1,6 +1,5 @@
 package cn.zmj.test.domain.strategy;
 
-
 import cn.zmj.domain.strategy.model.valobj.*;
 import cn.zmj.domain.strategy.service.rule.tree.factory.DefaultTreeFactory;
 import cn.zmj.domain.strategy.service.rule.tree.factory.engine.IDecisionTreeEngine;
@@ -63,7 +62,7 @@ public class LogicTreeTest {
                 .treeId("100000001")
                 .ruleKey("rule_luck_award")
                 .ruleDesc("限定用户已完成N次抽奖后解锁")
-                .ruleValue("1")
+                .ruleValue("101:1,100")
                 .treeNodeLineVOList(null)
                 .build();
 
@@ -75,7 +74,7 @@ public class LogicTreeTest {
                 .treeNodeLineVOList(new ArrayList<RuleTreeNodeLineVO>() {{
                     add(RuleTreeNodeLineVO.builder()
                             .treeId("100000001")
-                            .ruleNodeFrom("rule_lock")
+                            .ruleNodeFrom("rule_stock")
                             .ruleNodeTo("rule_luck_award")
                             .ruleLimitType(RuleLimitTypeVO.EQUAL)
                             .ruleLimitValue(RuleLogicCheckTypeVO.TAKE_OVER)
@@ -97,7 +96,7 @@ public class LogicTreeTest {
 
         IDecisionTreeEngine treeEngine = defaultTreeFactory.openLogicTree(ruleTreeVO);
 
-        DefaultTreeFactory.StrategyAwardVO data = treeEngine.process("xiaofuge", 100001L, 100);
+        DefaultTreeFactory.StrategyAwardVO data = treeEngine.process("xiaofuge", 100001L, 100, null);
         log.info("测试结果：{}", JSON.toJSONString(data));
 
     }

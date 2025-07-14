@@ -8,8 +8,10 @@ import cn.zmj.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import cn.zmj.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public interface IStrategyRepository {
     List<StrategyAwardEntity> queryStrategyAwardList(Long strategyId);
@@ -45,6 +47,7 @@ public interface IStrategyRepository {
      * @return 扣减结果
      */
     Boolean subtractionAwardStock(String cacheKey);
+    Boolean subtractionAwardStock(String cacheKey, Date endDateTime);
 
     /**
      * 写入奖品库存消费队列
@@ -78,4 +81,6 @@ public interface IStrategyRepository {
     Long queryStrategyIdByActivity(Long activityId);
 
     Integer queryTodayUserRaffleCount(String userId, Long strategyId);
+
+    Map<String, Integer> queryAwardRuleLockCount(String[] treeIds);
 }
