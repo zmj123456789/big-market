@@ -2,6 +2,7 @@ package cn.zmj.domain.strategy.service.raffle;
 
 import cn.zmj.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.zmj.domain.strategy.model.valobj.RuleTreeVO;
+import cn.zmj.domain.strategy.model.valobj.RuleWeightVO;
 import cn.zmj.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import cn.zmj.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 import cn.zmj.domain.strategy.repository.IStrategyRepository;
@@ -90,4 +91,17 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy implements IRa
     public Map<String, Integer> queryAwardRuleLockCount(String[] treeIds) {
         return repository.queryAwardRuleLockCount(treeIds);
     }
+
+    @Override
+    public List<RuleWeightVO> queryAwardRuleWeightByActivityId(Long activityId) {
+        Long strategyId=repository.queryStrategyIdByActivity(activityId);
+        return queryAwardRuleWeight(strategyId);
+    }
+
+    @Override
+    public List<RuleWeightVO> queryAwardRuleWeight(Long strategyId) {
+        return repository.queryAwardRuleWeight(strategyId);
+    }
+
+
 }

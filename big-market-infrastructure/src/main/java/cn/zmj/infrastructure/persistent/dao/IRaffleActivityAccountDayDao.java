@@ -1,6 +1,7 @@
 package cn.zmj.infrastructure.persistent.dao;
 
 import cn.bugstack.middleware.db.router.annotation.DBRouter;
+import cn.zmj.infrastructure.persistent.po.RaffleActivityAccount;
 import cn.zmj.infrastructure.persistent.po.RaffleActivityAccountDay;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -20,6 +21,10 @@ public interface IRaffleActivityAccountDayDao {
     void insertActivityAccountDay(RaffleActivityAccountDay build);
     @DBRouter
     Integer queryRaffleActivityAccountDayPartakeCount(RaffleActivityAccountDay raffleActivityAccountDay);
+
+    void addAccountQuota(RaffleActivityAccountDay raffleActivityAccountDay);
+
+
 }
 
 

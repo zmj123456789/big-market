@@ -4,6 +4,7 @@ import cn.zmj.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.zmj.domain.strategy.model.entity.StrategyEntity;
 import cn.zmj.domain.strategy.model.entity.StrategyRuleEntity;
 import cn.zmj.domain.strategy.model.valobj.RuleTreeVO;
+import cn.zmj.domain.strategy.model.valobj.RuleWeightVO;
 import cn.zmj.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import cn.zmj.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 
@@ -83,4 +84,8 @@ public interface IStrategyRepository {
     Integer queryTodayUserRaffleCount(String userId, Long strategyId);
 
     Map<String, Integer> queryAwardRuleLockCount(String[] treeIds);
+
+    List<RuleWeightVO> queryAwardRuleWeight(Long strategyId);
+
+    Integer queryActivityAccountTotalUseCount(String userId, Long strategyId);
 }

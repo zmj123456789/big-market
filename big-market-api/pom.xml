@@ -27,6 +27,10 @@
             <artifactId>big-market-types</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>cn.zmj</groupId>
+            <artifactId>big-market-infrastructure</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

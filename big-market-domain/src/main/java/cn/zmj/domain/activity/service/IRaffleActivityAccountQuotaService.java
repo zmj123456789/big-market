@@ -1,5 +1,6 @@
 package cn.zmj.domain.activity.service;
 
+import cn.zmj.domain.activity.model.entity.ActivityAccountEntity;
 import cn.zmj.domain.activity.model.entity.SkuRechargeEntity;
 
 /**
@@ -29,4 +30,8 @@ public interface IRaffleActivityAccountQuotaService {
      */
 
     Integer queryRaffleActivityAccountDayPartakeCount(Long activityId, String userId);
+
+    ActivityAccountEntity queryActivityAccountEntity(Long activityId, String userId);
+
+    Integer queryRaffleActivityAccountPartakeCount(Long activityId, String userId);
 }

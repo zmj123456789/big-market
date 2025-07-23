@@ -7,7 +7,7 @@
           <GenerateConfig>
             <option name="annotationType" value="NONE" />
             <option name="basePackage" value="cn.zmj.infrastructure.persistent" />
-            <option name="basePath" value="src/main/" />
+            <option name="basePath" value="src\main\java" />
             <option name="classNameStrategy" value="camel" />
             <option name="encoding" value="UTF-8" />
             <option name="extraClassSuffix" value="" />
@@ -42,30 +42,18 @@
               </list>
             </option>
             <option name="needsComment" value="true" />
-            <option name="needsModel" value="true" />
+            <option name="needsModel" value="false" />
             <option name="relativePackage" value="po" />
             <option name="superClass" value="" />
             <option name="tableUIInfoList">
               <list>
                 <TableUIInfo>
-                  <option name="className" value="Task" />
-                  <option name="tableName" value="task" />
+                  <option name="className" value="DailyBehaviorRebate" />
+                  <option name="tableName" value="daily_behavior_rebate" />
                 </TableUIInfo>
                 <TableUIInfo>
-                  <option name="className" value="RaffleActivityAccountDay" />
-                  <option name="tableName" value="raffle_activity_account_day" />
-                </TableUIInfo>
-                <TableUIInfo>
-                  <option name="className" value="RaffleActivityAccountMonth" />
-                  <option name="tableName" value="raffle_activity_account_month" />
-                </TableUIInfo>
-                <TableUIInfo>
-                  <option name="className" value="UserAwardRecord000" />
-                  <option name="tableName" value="user_award_record_000" />
-                </TableUIInfo>
-                <TableUIInfo>
-                  <option name="className" value="UserRaffleOrder000" />
-                  <option name="tableName" value="user_raffle_order_000" />
+                  <option name="className" value="UserBehaviorRebateOrder000" />
+                  <option name="tableName" value="user_behavior_rebate_order_000" />
                 </TableUIInfo>
               </list>
             </option>
